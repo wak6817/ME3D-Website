@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Een overzichtelijke collectie van zorgvuldig gekozen producten."
+    />
+    <title>ME3D</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap");
+
+      :root {
+        --ink: #1e2420;
+        --muted: #6d766f;
+        --paper: #f7f5ef;
+        --surface: #fffdf8;
+        --line: #dfded5;
+        --accent: #c75d3e;
+        --accent-dark: #963d2b;
+        --sage: #d9e0d2;
+        --shadow: 0 20px 50px rgba(36, 43, 35, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: "DM Sans", sans-serif;
+        line-height: 1.5;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page-shell {
+        overflow: hidden;
+      }
+
+      .collection {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 40px 28px 70px;
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 28px 20px;
+      }
+
+      .product-card {
+        overflow: hidden;
+        background: var(--surface);
+        box-shadow: var(--shadow);
+        transition:
+          transform 220ms ease,
+          box-shadow 220ms ease;
+      }
+
+      .product-card:hover {
+        box-shadow: 0 24px 55px rgba(36, 43, 35, 0.13);
+        transform: translateY(-5px);
+      }
+
+      .product-image {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1.18;
+        object-fit: cover;
+        background: #e7e4da;
+      }
+
+      .product-info {
+        padding: 20px 20px 22px;
+      }
+
+      .product-meta {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 8px;
+      }
+
+      h3 {
+        margin-bottom: 0;
+        font-family: "Playfair Display", serif;
+        font-size: 1.45rem;
+        line-height: 1.1;
+      }
+
+      .price {
+        color: var(--accent-dark);
+        font-size: 0.95rem;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      @media (max-width: 800px) {
+        .product-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 560px) {
+        .collection {
+          padding: 28px 20px 60px;
+        }
+        .product-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-shell">
+      <main>
+        <section class="collection" id="collectie">
+          <div class="product-grid" id="product-grid">
+            <article class="product-card">
+              <img
+                class="product-image"
+                src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=900&q=85"
+                alt="Telefoon op een standaard"
+                loading="lazy"
+              />
+              <div class="product-info">
+                <div class="product-meta">
+                  <h3>Telefoon Standaard</h3>
+                  <span class="price">€ 2,50</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img
+                class="product-image"
+                src="https://images.unsplash.com/photo-1616469829941-c7200edec809?auto=format&fit=crop&w=900&q=85"
+                alt="Kabelhouder met een kabel"
+                loading="lazy"
+              />
+              <div class="product-info">
+                <div class="product-meta">
+                  <h3>Kabelhouder</h3>
+                  <span class="price">€ 1,00</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img
+                class="product-image"
+                src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=900&q=85"
+                alt="Fluit als muziekinstrument"
+                loading="lazy"
+              />
+              <div class="product-info">
+                <div class="product-meta">
+                  <h3>Fluit</h3>
+                  <span class="price">€ 0,50</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img
+                class="product-image"
+                src="https://images.unsplash.com/photo-1625842268584-8f3296236761?auto=format&fit=crop&w=900&q=85"
+                alt="USB-accessoire op een bureau"
+                loading="lazy"
+              />
+              <div class="product-info">
+                <div class="product-meta">
+                  <h3>USB Cleaner</h3>
+                  <span class="price">€ 0,50</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img
+                class="product-image"
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=85"
+                alt="Complete set met accessoires"
+                loading="lazy"
+              />
+              <div class="product-info">
+                <div class="product-meta">
+                  <h3>Set</h3>
+                  <span class="price">€ 3,00</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
